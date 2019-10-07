@@ -104,14 +104,3 @@ function parseMinusSeparatedExpression (expression) {
     const result = numbers.slice(1).reduce((acc, no) => acc - no, initialValue);
 	return result;
 };
-
-// * + 
-function expressionCalculator(expression) {
-    expression = expression.split(' ').join('');
-    const numbersString = split(expression, '+');
-    const numbers = numbersString.map(noStr => parseMinusSeparatedExpression(noStr));
-    const initialValue = 0.0;
-    const result = numbers.reduce((acc, no) => acc + no, initialValue);
-
-    return result;
-};
